@@ -4,6 +4,7 @@ All notable changes to `packstub/agents` are documented here.
 
 ## Unreleased
 
+- The default assistant name ("Assistant") is translated; a name you set stays as it is
 - Security: in a long-running worker a workspace without its own provider key gets the platform key back instead of keeping the previous workspace's key
 - Security: a person who belongs to two workspaces no longer sees, opens or searches the chats started in the other one. **Upgrading:** run `php artisan migrate` (adds `tenant` to `agent_conversations`); chats stored before it stay hidden in apps with workspaces until their `tenant` is filled in
 - Tested on laravel/ai 1.4: approving a proposal in a test with the assistant faked now runs the tool, so `AgentEval::decide()` returns its result
